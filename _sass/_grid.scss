@@ -1,0 +1,109 @@
+$total-columns: 12;
+$row-width: 62.5rem;
+$gutter: 1.875rem;
+
+@function grid-calc($colNumber, $totalColumns) {
+  $result: percentage(($colNumber / $totalColumns));
+  @if $result == 0% { $result: 0; }
+  @return $result;
+}
+
+@mixin grid-column(
+  $columns: false) {
+  width: grid-calc($columns, $total-columns);
+}
+
+.row {
+  width: 100%;
+	margin: 0 auto;
+	max-width: $row-width;
+
+  &:before, &:after {
+  	content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .row {
+  	width: auto;
+  	margin: 0 (-($gutter/2));
+  	max-width: none;
+
+    &:before, &:after {
+      content:" ";
+      display:table;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+}
+
+.column {
+  float: left;
+  position: relative;
+	padding-left: ($gutter/2);
+	padding-right: ($gutter/2);
+	width: 100%;
+}
+
+@media #{$xsmall-up} {
+  @for $i from 1 through $total-columns {
+    .xsmall-#{$i} { @include grid-column($columns:$i); }
+  }
+}
+
+@media #{$small-up} {
+  @for $i from 1 through $total-columns {
+    .small-#{$i} { @include grid-column($columns:$i); }
+  }
+}
+
+@media #{$medium-up} {
+  @for $i from 1 through $total-columns {
+    .medium-#{$i} { @include grid-column($columns:$i); }
+  }
+}
+
+@media #{$large-up} {
+  @for $i from 1 through $total-columns {
+    .large-#{$i} { @include grid-column($columns:$i); }
+  }
+}
+
+/*@import "gridle/gridle";
+
+@include gridle_setup((
+  context : 12,
+  gutter-width : 0.9375em,
+  direction : rtl,
+  generate-push-classes : false,
+));
+
+@include gridle_register_state(xs, (
+));
+
+@include gridle_register_state(sm, (
+  min-width : 30em,
+));
+
+@include gridle_register_state(me, (
+  min-width : 40.0625em,
+));
+
+@include gridle_register_state(la, (
+  min-width : 64.0625em,
+));
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 62.5em;
+}
+
+@include gridle_generate_classes();
+*/
