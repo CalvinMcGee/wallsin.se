@@ -8,9 +8,22 @@ $gutter: 1.875rem;
   @return $result;
 }
 
-@mixin grid-column(
-  $columns: false) {
-  width: grid-calc($columns, $total-columns);
+@mixin grid-columns(
+  $prefix: 'xsmall') {
+  @for $i from 1 through $total-columns {
+    .#{$prefix}-#{$i} {width: grid-calc($i, $total-columns);}
+  }
+
+  .#{$prefix}-center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .#{$prefix}-uncenter {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .row {
@@ -52,27 +65,19 @@ $gutter: 1.875rem;
 }
 
 @media #{$xsmall-up} {
-  @for $i from 1 through $total-columns {
-    .xsmall-#{$i} { @include grid-column($columns:$i); }
-  }
+  @include grid-columns($prefix:'xsmall');
 }
 
 @media #{$small-up} {
-  @for $i from 1 through $total-columns {
-    .small-#{$i} { @include grid-column($columns:$i); }
-  }
+  @include grid-columns($prefix:'small');
 }
 
 @media #{$medium-up} {
-  @for $i from 1 through $total-columns {
-    .medium-#{$i} { @include grid-column($columns:$i); }
-  }
+  @include grid-columns($prefix:'medium');
 }
 
 @media #{$large-up} {
-  @for $i from 1 through $total-columns {
-    .large-#{$i} { @include grid-column($columns:$i); }
-  }
+  @include grid-columns($prefix:'large');
 }
 
 /*@import "gridle/gridle";
