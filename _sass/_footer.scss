@@ -16,6 +16,13 @@ footer {
 .headshot {
   border-radius: 50%;
 }
+.icon {
+  display: table-cell;
+  vertical-align: middle;
+}
+.icon-container {
+  display: table;
+}
 #icon-phone{
   fill: #B4B4B4;
   line-height: 5;
