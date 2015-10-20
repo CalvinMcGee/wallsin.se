@@ -1,0 +1,103 @@
+$include-html-classes: false;
+$include-js-meta-styles: false;
+
+@import 'foundation/components/forms';
+
+
+/* Standard Forms */
+form { margin: 0 0 $form-spacing; }
+
+/* Using forms within rows, we need to set some defaults */
+form .row { @include form-row-base; }
+
+/* Label Styles */
+label { @include form-label; }
+
+/* We use this to get basic styling on all basic form elements */
+input:not([type]), #{text-inputs(all, 'input')} {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  @include form-element;
+  @if $input-include-glowing-effect == false {
+    -webkit-transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
+    -moz-transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
+    -ms-transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
+    -o-transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
+    transition: border-color $input-transition-fade-time $input-transition-fade-timing-function, background $input-transition-fade-time $input-transition-fade-timing-function;
+  }
+  &.radius {
+    @include radius($input-border-radius);
+  }
+}
+
+
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+}
+
+/* Respect enforced amount of rows for textarea */
+textarea[rows] {
+  height: auto;
+}
+
+/* Not allow resize out of parent */
+textarea {
+  max-width: 100%;
+}
+
+// style placeholder text cross browser
+::-webkit-input-placeholder {
+  color: $input-placeholder-font-color;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $input-placeholder-font-color;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $input-placeholder-font-color;
+}
+
+:-ms-input-placeholder {
+   color: $input-placeholder-font-color;
+}
+
+
+/* Add height value for select elements to match text input height */
+select {
+  @include form-select;
+  height: ($input-font-size + ($form-spacing * 1.5) - rem-calc(1));
+  &[multiple] {
+    height: auto;
+  }
+}
+
+/* Adjust margin for form elements below */
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  margin: 0 0 $form-spacing 0;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin-#{$default-float}: $form-spacing * .5;
+  margin-#{$opposite-direction}: $form-spacing;
+  margin-bottom: 0;
+  vertical-align: baseline;
+}
+
+/* Normalize file input width */
+input[type="file"] {
+  width:100%;
+}
+
+/* We add basic fieldset styling */
+fieldset {
+  @include fieldset;
+}
