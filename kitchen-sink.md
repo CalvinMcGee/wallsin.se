@@ -137,6 +137,11 @@ alert(s);
         </label>
       </div>
     </div>
+    <div class="row">
+      <div class="small-12 column">
+        <a role="button" href="#" class="button">Standard knapp</a>
+      </div>
+    </div>
   </fieldset>
 </form>
 
