@@ -75,24 +75,27 @@ alert(s);
 
 <form>
   <fieldset>
-    <legend>Fieldset</legend>
+    <legend>Formulär</legend>
     <div class="row">
       <div class="large-12 column">
-        <label>Input Label</label>
-        <input type="text" placeholder="large-12.column" />
+        <label>Input Label
+          <input type="text" placeholder="large-12.column" />
+        </label>
       </div>
     </div>
     <div class="row">
       <div class="large-4 column">
-        <label>Input Label</label>
-        <input type="text" placeholder="large-4.column" />
+        <label>Input Label
+          <input type="text" placeholder="large-4.column" />
+        </label>
       </div>
       <div class="large-4 column">
-        <label>Input Label</label>
-        <input type="text" placeholder="large-4.column" />
+        <label>Input Label
+          <input type="text" placeholder="large-4.column" />
+        </label>
       </div>
       <div class="large-4 column">
-        <div class="row">
+        <div class="row collapse">
           <label>Input Label</label>
           <div class="small-9 column">
             <input type="text" placeholder="small-9.column" />
@@ -105,9 +108,38 @@ alert(s);
     </div>
     <div class="row">
       <div class="large-12 column">
-        <label>Textarea Label</label>
-        <textarea placeholder="small-12.column"></textarea>
+        <label>Select Box
+          <select>
+            <option value="husker">Husker</option>
+            <option value="starbuck">Starbuck</option>
+            <option value="hotdog">Hot Dog</option>
+            <option value="apollo">Apollo</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 column">
+        <label>Choose Your Favorite</label>
+        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+      </div>
+      <div class="large-6 column">
+        <label>Check these out</label>
+        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+        <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 column">
+        <label>Textarea Label
+          <textarea placeholder="small-12.column"></textarea>
+        </label>
       </div>
     </div>
   </fieldset>
 </form>
+
+## Linjal
+
+---
