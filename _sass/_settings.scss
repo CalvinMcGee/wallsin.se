@@ -9,11 +9,17 @@ $small-up: "#{$screen} and (min-width:#{$small-breakpoint})";
 $medium-up: "#{$screen} and (min-width:#{$medium-breakpoint})";
 $large-up: "#{$screen} and (min-width:#{$large-breakpoint})";
 
-$base_color: #ED1C24;
-$support_color: #F1791C;
-$accent_color : #12948B;
+$primary-color: #ED1C24;
+$primary-color-light-1: #F84951;
+$primary-color-light-2: #FC7178;
+$primary-color-dark-1: #BF0711;
+$primary-color-dark-2: #970008;
 
-$bg-color: #000;
+$secondary-color: #12948B;
+$secondary-color-light-1: #2D9B93;
+$secondary-color-light-2: #51B5AD;
+$secondary-color-dark-1: #05776F;
+$secondary-color-dark-2: #005E58;
 
 // Foundation inställningar
 $include-html-classes: false;
