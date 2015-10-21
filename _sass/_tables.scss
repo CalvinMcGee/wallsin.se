@@ -1,5 +1,10 @@
 @import 'foundation/components/tables';
 
+$table-even-row-bg: $primary-color-light-2;
+$table-border-color: $primary-color-light-1;
+$table-head-bg: $primary-color;
+$table-head-font-color: $vapor;
+
 table {
   @include table;
 }
