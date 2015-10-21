@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic|Roboto+Mono);
+
 html,body{
 	height:100%;
   font-size:100%;
@@ -16,9 +18,9 @@ body {
   background-color: $primary-color-light-2;
   color: $black;
   cursor: auto;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  font-family: $body-font-family;
+  font-style: $body-font-style;
+  font-weight: $body-font-weight;
   line-height: 1.5;
   margin: 0;
   padding: 0;
