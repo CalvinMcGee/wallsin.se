@@ -1,5 +1,5 @@
 footer {
-  background-color: $accent_color;
+  background-color: $secondary-color;
 }
 
 .separator-icon {
@@ -24,9 +24,9 @@ footer {
   display: table;
 }
 #icon-phone{
-  fill: #B4B4B4;
+  fill: $secondary-color-light-2;
   line-height: 5;
 }
 #icon-places {
-  fill: #b4b4b4;
+  fill: $secondary-color-light-2;
 }
