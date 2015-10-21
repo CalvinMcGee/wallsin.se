@@ -3,7 +3,7 @@ footer {
 }
 
 .separator-icon {
-  background-color: darken(#FFF, 25);
+  background-color: $secondary-color-dark-1;
   border-radius: 50%;
   display: inline-block;
   top: 0;
@@ -11,6 +11,11 @@ footer {
   padding: 1rem;
   position: relative;
   transform: translate(-50%, -50%);
+}
+
+#icon-excavator {
+  fill: $vapor;
+  vertical-align: middle;
 }
 
 .headshot {
