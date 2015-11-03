@@ -6,5 +6,6 @@ $table-head-bg: $primary-color;
 $table-head-font-color: $vapor;
 
 table {
+  font-weight: $font-weight-normal;
   @include table;
 }
