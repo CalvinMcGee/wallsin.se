@@ -1,0 +1,76 @@
+---
+layout: page
+title: Priser
+permalink: /priser/
+priser:
+  Gubbe:
+    ex: 450:- /tim
+    inkl: 563:- /tim
+  Motorsågstillägg:
+    ex: 100:- /tim
+    inkl: 125:- /tim
+  Minigrävare/Traktor/Släp:
+    ex: 800:- /tim
+    inkl: 1000:- /tim
+  Traktorgrävare:
+    ex: 850:- /tim
+    inkl: 1063:- /tim
+  Minitraktor vikplog och spridare:
+    ex: 750:- /tim
+    inkl: 938:- /tim
+  Traktor snöröjning m. vikplog o spridare:
+    ex: 825:- /tim
+    inkl: 1032:- /tim
+  Traktorgrävare snöröjning m. Skopa 4m3:
+    ex: 900:- /tim
+    inkl: 1125:- /tim
+  Övertid vardag:
+    ex: 180:- /tim
+    inkl: 225:- /tim
+  Övertid helg:
+    ex: 200:- /tim
+    inkl: 250:- /tim
+  Harpad matjord från:
+    ex: 200:- /m3
+    inkl: 250:- /m3
+  Träflis:
+    ex: 375:- /m3
+    inkl: 469:- /m3
+  Milersättning från:
+    ex: 50:- /mil
+    inkl: 63:- /mil
+---
+<table>
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th style="text-align: right;">exkl. moms</th>
+      <th style="text-align: right;">inkl. moms</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in page.priser %}
+      <tr>
+        <td>{{item[0]}}</td>
+        <td style="text-align: right;">{{item[1].ex}}</td>
+        <td style="text-align: right;">{{item[1].inkl}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<p>
+  <strong>Med reservation för prisändringar</strong>
+</p>
+<p>
+  <strong>Priserna senast uppdaterade 2014-12-12</strong>
+</p>
+<p>Vi utför även jouruppdrag kvällar, nätter och helger. Ring för prisförfrågningar.</p>
+<h2>Försäljning</h2>
+<p>Vi har även försäljning av:</p>
+<ul>
+  <li>Fiberduk</li>
+  <li>Markrör</li>
+  <li>Pordrän</li>
+  <li>Grus/makadam/jord</li>
+  <li>Träflis - Perfekt när man vill slippa det mesta ogräset, används som täckbark - fast bättre.</li>
+</ul>
