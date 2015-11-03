@@ -1,4 +1,4 @@
-header {
+.page-header {
   background-color: $navigation-background-color;
 }
 
@@ -34,7 +34,7 @@ header {
 
 
 @media #{$medium-up} {
-  header {
+  .page-header {
     border-top: solid 1rem $navigation-background-color-hover;
   }
 
