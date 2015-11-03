@@ -1,0 +1,55 @@
+header {
+  background-color: $navigation-background-color;
+}
+
+.menu {
+  display: block;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+
+  &--item {
+    position: relative;
+  }
+
+  &--link {
+    background-color: $navigation-background-color;
+    border-bottom: solid 1px $navigation-border-color;
+    color: $navigation-link-color;
+    display: block;
+    font-weight: $font-weight-bold;
+    line-height: 3;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: $navigation-background-color-hover;
+      color: $navigation-link-color;
+    }
+  }
+}
+
+
+@media #{$medium-up} {
+  nav {
+    @include clearfix;
+  }
+  .menu {
+    display: inline;
+    float: right;
+
+    &--item {
+      float: left;
+    }
+
+    &--link {
+      border-bottom: none;
+
+      &:hover,
+      &:focus {
+      }
+    }
+  }
+}
