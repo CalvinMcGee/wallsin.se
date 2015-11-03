@@ -13,9 +13,9 @@ header {
   }
 
   &--link {
-    background-color: $navigation-background-color;
+    background-color: $navigation-background-color-stacked;
     border-bottom: solid 1px $navigation-border-color;
-    color: $navigation-link-color;
+    color: $navigation-link-color-stacked;
     display: block;
     font-weight: $font-weight-bold;
     line-height: 3;
@@ -23,32 +23,43 @@ header {
     padding-left: 1rem;
     text-transform: uppercase;
 
+    &.active,
     &:hover,
     &:focus {
-      background-color: $navigation-background-color-hover;
-      color: $navigation-link-color;
+      background-color: $navigation-background-color-stacked-hover;
+      color: $navigation-link-color-stacked-hover;
     }
   }
 }
 
 
 @media #{$medium-up} {
+  header {
+    border-top: solid 1rem $navigation-background-color-hover;
+  }
+
   nav {
     @include clearfix;
   }
+
   .menu {
-    display: inline;
-    float: right;
+    text-align: center;
 
     &--item {
-      float: left;
+      display: inline-block;
     }
 
     &--link {
       border-bottom: none;
+      padding-top: 2rem;
+      background-color: $navigation-background-color;
+      color: $navigation-link-color;
 
+      &.active,
       &:hover,
       &:focus {
+        background-color: $navigation-background-color-hover;
+        color: $navigation-link-color-hover;
       }
     }
   }
