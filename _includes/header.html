@@ -1,20 +1,22 @@
+{% assign current = page.url | downcase | split: '/' %}
+
 <header class="page-header">
   <nav class="row">
     <ul class="menu">
       <li class="menu--item">
-        <a href="{{ site.baseurl }}/" class="menu--link active">Hem</a>
+        <a href="{{ site.baseurl }}/" class="menu--link{% if current[1] == 'index.html' %} active{% endif %}">Hem</a>
       </li>
       <li class="menu--item">
-        <a href="{{ site.baseurl }}/bakgrund/" class="menu--link">Bakgrund</a>
+        <a href="{{ site.baseurl }}/bakgrund/" class="menu--link{% if current[1] == 'bakgrund' %} active{% endif %}">Bakgrund</a>
       </li>
       <li class="menu--item">
-        <a href="{{ site.baseurl }}/priser/" class="menu--link">Priser</a>
+        <a href="{{ site.baseurl }}/priser/" class="menu--link{% if current[1] == 'priser' %} active{% endif %}">Priser</a>
       </li>
       <li class="menu--item">
-        <a href="{{ site.baseurl }}/bilder/" class="menu--link">Bilder</a>
+        <a href="{{ site.baseurl }}/bilder/" class="menu--link{% if current[1] == 'bilder' %} active{% endif %}">Bilder</a>
       </li>
       <li class="menu--item">
-        <a href="{{ site.baseurl }}/kontakt/" class="menu--link">Kontakt</a>
+        <a href="{{ site.baseurl }}/kontakt/" class="menu--link{% if current[1] == 'kontakt' %} active{% endif %}">Kontakt</a>
       </li>
     </ul>
   </nav>
