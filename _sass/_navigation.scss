@@ -2,33 +2,48 @@
   background-color: $navigation-background-color;
 }
 
+.page-header-row {
+  display: table;
+}
+
+.page-header--logo {
+  display: table-header-group;
+
+  > img {
+    padding: 1rem;
+  }
+}
+
 .menu {
-  display: block;
+  display: table-row-group;
+}
+
+.menu--list {
   margin-bottom: 0;
   margin-left: 0;
   list-style: none;
+}
 
-  &--item {
-    position: relative;
-  }
+.menu--item {
+  position: relative;
+}
 
-  &--link {
-    background-color: $navigation-background-color-stacked;
-    border-bottom: solid 1px $navigation-border-color;
-    color: $navigation-link-color-stacked;
-    display: block;
-    font-weight: $font-weight-bold;
-    line-height: 3;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    text-transform: uppercase;
+.menu--link {
+  background-color: $navigation-background-color-stacked;
+  border-bottom: solid 1px $navigation-border-color;
+  color: $navigation-link-color-stacked;
+  display: block;
+  font-weight: $font-weight-bold;
+  line-height: 3;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-transform: uppercase;
 
-    &.active,
-    &:hover,
-    &:focus {
-      background-color: $navigation-background-color-stacked-hover;
-      color: $navigation-link-color-stacked-hover;
-    }
+  &.active,
+  &:hover,
+  &:focus {
+    background-color: $navigation-background-color-stacked-hover;
+    color: $navigation-link-color-stacked-hover;
   }
 }
 
@@ -38,29 +53,35 @@
     border-top: solid 1rem $navigation-background-color-hover;
   }
 
-  nav {
-    @include clearfix;
+  .page-header-row {
+    display: block;
+  }
+
+  .page-header--logo {
+    display: block;
+    float: right;
   }
 
   .menu {
-    text-align: center;
+    display: block;
+    float: left;
+  }
 
-    &--item {
-      display: inline-block;
-    }
+  .menu--item {
+    display: inline-block;
+  }
 
-    &--link {
-      border-bottom: none;
-      padding-top: 2rem;
-      background-color: $navigation-background-color;
-      color: $navigation-link-color;
+  .menu--link {
+    border-bottom: none;
+    padding-top: 2rem;
+    background-color: $navigation-background-color;
+    color: $navigation-link-color;
 
-      &.active,
-      &:hover,
-      &:focus {
-        background-color: $navigation-background-color-hover;
-        color: $navigation-link-color-hover;
-      }
+    &.active,
+    &:hover,
+    &:focus {
+      background-color: $navigation-background-color-hover;
+      color: $navigation-link-color-hover;
     }
   }
 }
