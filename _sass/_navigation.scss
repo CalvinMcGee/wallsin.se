@@ -4,6 +4,7 @@
 
 .page-header-row {
   display: table;
+  width: 100%;
 }
 
 .page-header--logo {
@@ -54,12 +55,15 @@
   }
 
   .page-header-row {
-    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: auto;
   }
 
   .page-header--logo {
     display: block;
-    float: right;
+    float: left;
   }
 
   .menu {
