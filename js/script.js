@@ -1,34 +1,33 @@
 $(document).ready(function() {
-  $('.gallery--link').addClass('js-gallery-closed');
+  $('.gallery--link').addClass('js-gallery js-gallery-closed');
 
-  $('body').on('click', '.js-gallery-closed', function(e) {
+  $('body').on('click', '.js-gallery', function(e) {
     e.preventDefault();
 
     $this = $(this);
-    var fullImageSource = $this.attr('href');
-    var thumbnail = this.children[0];
 
-    $this.unbind(e);
+    if($this.hasClass('js-gallery-closed')) {
+      $('.js-gallery-open').find('.js-show').remove();
+      $('.js-gallery-open').find('.js-hide').removeClass('js-hide');
+      $('.js-gallery-open').addClass('js-gallery-closed').removeClass('js-gallery-open');
 
-    $('<img/>')
-      .attr('src', fullImageSource)
-      .addClass('js-hide')
-      .on('load', function() {
-        $this.removeClass('js-gallery-closed').addClass('js-gallery-open')
-        $(this).removeClass('js-hide').addClass('js-show');
-        $(thumbnail).addClass('js-hide');
-      })
-      .appendTo($this);
+      var fullImageSource = $this.attr('href');
+      var thumbnail = this.children[0];
 
-    return false;
-  });
-
-  $('body').on('click', '.js-gallery-open', function(e) {
-    e.preventDefault();
-
-    $(this).find('.js-show').remove();
-    $(this).find('.js-hide').removeClass('js-hide');
-    $(this).addClass('js-gallery-closed').removeClass('js-gallery-open')
+      $('<img/>')
+        .attr('src', fullImageSource)
+        .addClass('gallery--thumbnail js-hide')
+        .on('load', function() {
+          $this.removeClass('js-gallery-closed').addClass('js-gallery-open')
+          $(this).removeClass('js-hide').addClass('js-show');
+          $(thumbnail).addClass('js-hide');
+        })
+        .appendTo($this);
+    } else {
+      $this.find('.js-show').remove();
+      $this.find('.js-hide').removeClass('js-hide');
+      $this.addClass('js-gallery-closed').removeClass('js-gallery-open');
+    }
 
     return false;
   });
