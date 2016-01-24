@@ -21,8 +21,14 @@ footer {
 .headshot {
   border-radius: 50%;
 }
+
+.footer-information {
+  text-align: center;
+}
+
 .icon {
   display: table-cell;
+  padding-right: 0.5rem;
   vertical-align: middle;
 }
 .icon-container {
@@ -34,4 +40,10 @@ footer {
 }
 #icon-places {
   fill: $secondary-color-light-2;
+}
+
+@media #{$small-up} {
+  .footer-information {
+    text-align: left;
+  }
 }
