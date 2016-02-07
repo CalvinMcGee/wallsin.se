@@ -42,6 +42,10 @@ footer {
   fill: $secondary-color-light-2;
 }
 
+.copy {
+  margin-top: 1rem;
+}
+
 @media #{$small-up} {
   .footer-information {
     text-align: left;
