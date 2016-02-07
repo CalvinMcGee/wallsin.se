@@ -14,7 +14,10 @@
 .hero--heading{
   color: inherit;
   font-weight: $font-weight-normal;
-  line-height: 3;
   text-align: center;
   text-transform: uppercase;
+
+  @media #{$small-up} {
+    line-height: 3;
+  }
 }
