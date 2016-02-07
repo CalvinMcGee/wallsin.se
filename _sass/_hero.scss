@@ -1,0 +1,20 @@
+.hero {
+  position: relative;
+}
+
+.hero--content {
+  background: rgb(0, 0, 0);//fallback for older browsers
+  background: rgba($secondary-color-light-2, 0.6);
+  color: #FFF;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.hero--heading{
+  color: inherit;
+  font-weight: $font-weight-normal;
+  line-height: 3;
+  text-align: center;
+  text-transform: uppercase;
+}
