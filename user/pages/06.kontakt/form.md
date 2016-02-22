@@ -49,21 +49,20 @@ form:
       validate:
         required: true
 
-#    - name: g-recaptcha-response
-#      row: 4
-#      label: Captcha
-#      type: captcha
-#      outerclasses: 'column xsmall-12'
-#      recatpcha_site_key: '6Lfo2RgTAAAAACkXc41aJ3iE5s6f1iaUMnFL7GTe'
-#      recaptcha_not_validated: 'Captcha inte giltig'
-#      validate:
-#        required: true
+    - name: g-recaptcha-response
+      row: 4
+      label: Captcha
+      type: captcha
+      outerclasses: 'column xsmall-12'
+      recatpcha_site_key: '6Lfo2RgTAAAAACkXc41aJ3iE5s6f1iaUMnFL7GTe'
+      recaptcha_not_validated: 'Captcha inte giltig'
+      validate:
+        required: true
   buttons:
     - type: submit
       value: Skicka
 
   process:
-#    - captcha:
-#      recatpcha_secret: '6Lfo2RgTAAAAAKBZml7nM2ZFSeOO8i_cgsvdZ-rG'
+    - captcha: {recatpcha_secret: '6Lfo2RgTAAAAAKBZml7nM2ZFSeOO8i_cgsvdZ-rG'}
     - display: thankyou
 ---
