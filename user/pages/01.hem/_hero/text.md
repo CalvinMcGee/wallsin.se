@@ -1,5 +1,7 @@
 ---
 title: Wallsin Entreprenad
+process:
+  twig: true
 ---
 <section class="hero">
   {% set image =  page.media.images|first %}

@@ -1,5 +1,7 @@
 ---
 title: Tjänster vi erbjuder
+process:
+  twig: true
 ---
 <h2>{{ page.title()}}</h2>
 <div class="services">
