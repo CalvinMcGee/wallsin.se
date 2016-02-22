@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic|Roboto+Mono);
+
+html,body{
+	height:100%;
+  font-size:100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $body-bg;
+  color: $black;
+  cursor: auto;
+  font-family: $body-font-family;
+  font-style: $body-font-style;
+  font-weight: $body-font-weight;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+a:hover { cursor: pointer; }
+
+img {
+	max-width: 100%;
+	height: auto;
+  display: inline-block;
+  vertical-align: middle;
+	-ms-interpolation-mode: bicubic;
+}
+
+textarea { height: auto; min-height: 50px; }
+
+select { width: 100%; }

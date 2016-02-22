@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% if header.description %}
+    <meta name="description" content="{{ header.description }}">
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    {% endif %}
+    {% if header.robots %}
+    <meta name="robots" content="{{ header.robots }}">
+    {% endif %}
+
+    <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+
+    {% block stylesheets %}
+        {% do assets.add('theme://css-compiled/main.css') %}
+
+        {{ assets.css() }}
+    {% endblock %}
+  </head>
+  <body>
+    {% include 'partials/header.html.twig' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'partials/footer.html.twig' %}
+
+    {% block javascripts %}
+        {% do assets.add('https://code.jquery.com/jquery-2.1.4.min.js') %}
+        {% do assets.add('https://code.jquery.com/ui/1.11.3/jquery-ui.min.js') %}
+        {% do assets.add('theme://js/script.js') %}
+
+        {{ assets.js() }}
+    {% endblock %}
+  </body>
+</html>

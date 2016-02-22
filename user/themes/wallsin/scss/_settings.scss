@@ -1,0 +1,78 @@
+// Foundation inställningar
+$include-html-classes: false;
+$include-js-meta-styles: false;
+
+@import 'foundation/components/global';
+
+$small-breakpoint:  30.063em;
+$medium-breakpoint: 40.063em;
+$large-breakpoint:  64.063em;
+
+$screen: "only screen";
+
+$xsmall-up: $screen;
+$small-up: "#{$screen} and (min-width:#{$small-breakpoint})";
+$medium-up: "#{$screen} and (min-width:#{$medium-breakpoint})";
+$large-up: "#{$screen} and (min-width:#{$large-breakpoint})";
+
+$primary-color: #ED1C24;
+$primary-color-light-1: #F84951;
+$primary-color-light-2: #FC7178;
+$primary-color-dark-1: #BF0711;
+$primary-color-dark-2: #970008;
+
+$secondary-color: #12948B;
+$secondary-color-light-1: #2D9B93;
+$secondary-color-light-2: #51B5AD;
+$secondary-color-dark-1: #05776F;
+$secondary-color-dark-2: #005E58;
+
+$font-family-sans-serif: Roboto, sans-serif;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif ;
+$font-family-monospace: "Roboto Mono", monospace ;
+
+// We use these to define default font weights
+$font-weight-light: 300;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+
+// We use these to control various global styles
+$body-bg: $vapor;
+$body-font-color: $jet;
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $font-weight-light;
+$body-font-style: normal;
+
+$code-color: $snow;
+$code-font-family: $font-family-monospace;
+$code-font-weight: $font-weight-normal;
+$code-background-color: $secondary-color-dark-1;
+$code-border-color: $secondary-color-dark-2;
+
+$blockquote-color: $charcoal;
+$blockquote-cite-color: $charcoal;
+$blockquote-border-color: $gainsboro;
+
+$hr-border-color: $gainsboro;
+
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: $primary-color-dark-1;
+
+$header-font-family: $body-font-family;
+$header-font-weight: $font-weight-light;
+$header-font-style: normal;
+$header-font-color: $jet;
+
+$navigation-background-color: $vapor;
+$navigation-background-color-hover: $primary-color;
+$navigation-background-color-stacked: $primary-color;
+$navigation-background-color-stacked-hover: $primary-color-dark-1;
+$navigation-link-color: $primary-color;
+$navigation-link-color-hover: $vapor;
+$navigation-link-color-stacked: $vapor;
+$navigation-link-color-stacked-hover: $vapor;
+$navigation-border-color: $vapor;
+
+$services-background-color: $primary-color-light-1;
+$services-item-color: $vapor;
+$services-font-weight: $font-weight-bold;

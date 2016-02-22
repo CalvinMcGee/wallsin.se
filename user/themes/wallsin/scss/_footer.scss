@@ -1,0 +1,53 @@
+footer {
+  background-color: $secondary-color;
+}
+
+.separator-icon {
+  background-color: $secondary-color-dark-1;
+  border-radius: 50%;
+  display: inline-block;
+  top: 0;
+  left: 50%;
+  padding: 1.2rem;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+#icon-tractor {
+  fill: $vapor;
+  vertical-align: middle;
+}
+
+.headshot {
+  border-radius: 50%;
+}
+
+.footer-information {
+  text-align: center;
+}
+
+.icon {
+  display: table-cell;
+  padding-right: 0.5rem;
+  vertical-align: middle;
+}
+.icon-container {
+  display: table;
+}
+#icon-phone{
+  fill: $secondary-color-light-2;
+  line-height: 5;
+}
+#icon-places {
+  fill: $secondary-color-light-2;
+}
+
+.copy {
+  margin-top: 1rem;
+}
+
+@media #{$small-up} {
+  .footer-information {
+    text-align: left;
+  }
+}

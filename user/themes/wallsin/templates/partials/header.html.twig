@@ -1,0 +1,21 @@
+<header class="page-header">
+  <div class="row">
+    <div class="page-header-row">
+      <nav class="menu">
+        <ul class="menu--list">
+          {% for page in pages.children %}
+          {% if page.visible %}
+          {% set current_page = (page.active or page.activeChild) ? ' active' : '' %}
+          <li class="menu--item">
+            <a href="{{ page.url }}" class="menu--link{{ current_page }}">{{ page.menu }}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+      <section class="page-header--logo">
+        <img src="http://wallsin.se/images/Logga-Wallsinentrepenad.gif" />
+      </section>
+    </div>
+  </div>
+</header>

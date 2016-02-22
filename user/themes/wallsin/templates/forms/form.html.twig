@@ -1,0 +1,41 @@
+{% if form.message %}<div class="alert">{{ form.message }}</div>{% endif %}
+{% set multipart = '' %}
+{% set method = form.method|upper|default('POST') %}
+
+{% for field in form.fields %}
+    {% if (method == 'POST' and field.type == 'file') %}
+        {% set multipart = ' enctype="multipart/form-data"' %}
+    {% endif %}
+{% endfor %}
+
+<form name="{{ form.name }}"
+      action="{{ form.action ? base_url ~ form.action : page.url }}"
+      method="{{ method }}"{{ multipart }}>
+
+  <fieldset>
+    <legend>{{ form.legend }}</legend>
+
+{% set row = 1 %}
+<div class="row">
+{% for field in form.fields %}
+    {% set value = form.value(field.name) %}
+    {% set originalRow = row %}
+    {% set row = field.row %}
+    {% if row != originalRow %}
+      </div>
+      <hr />
+      <div class="row">
+    {% endif %}
+        {% include "forms/fields/#{field.type}/#{field.type}.html.twig" %}
+{% endfor %}
+</div>
+<div class="row">
+  <div class="column small-12">
+  {% for button in form.buttons %}
+      <button class="{{ button.classes|default('button') }}" type="{{ button.type|default('submit') }}">{{ button.value|t|default('Submit') }}</button>
+  {% endfor %}
+  </div>
+</div>
+  {{ nonce_field('form', 'form-nonce') }}
+  </fieldset>
+</form>

@@ -1,0 +1,26 @@
+.services {
+  background-color: $services-background-color;
+  padding: 2rem;
+}
+
+.services__list {
+  color: $services-item-color;
+  font-size: 1.375rem;
+  font-weight: $services-font-weight;
+  margin-left: 0;
+  list-style: inside;
+  line-height: 3;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+@media #{$medium-up} {
+  .services__list {
+    font-size: 1.6875rem;
+  }
+
+  .services__item {
+    float: left;
+    width: 50%;
+  }
+}
