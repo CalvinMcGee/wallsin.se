@@ -37,7 +37,7 @@ $font-weight-normal: normal;
 $font-weight-bold: bold;
 
 // We use these to control various global styles
-$body-bg: $vapor;
+$body-bg: $secondary-color;
 $body-font-color: $jet;
 $body-font-family: $font-family-sans-serif;
 $body-font-weight: $font-weight-light;
@@ -62,6 +62,8 @@ $header-font-family: $body-font-family;
 $header-font-weight: $font-weight-light;
 $header-font-style: normal;
 $header-font-color: $jet;
+
+$footer-background-color: $secondary-color;
 
 $navigation-background-color: $vapor;
 $navigation-background-color-hover: $primary-color;
