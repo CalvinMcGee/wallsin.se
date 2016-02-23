@@ -63,6 +63,7 @@ form:
       value: Skicka
 
   process:
-    - captcha: {recatpcha_secret: '6Lfo2RgTAAAAAKBZml7nM2ZFSeOO8i_cgsvdZ-rG'}
+    - captcha:
+        recatpcha_secret: '6Lfo2RgTAAAAAKBZml7nM2ZFSeOO8i_cgsvdZ-rG'
     - display: thankyou
 ---
