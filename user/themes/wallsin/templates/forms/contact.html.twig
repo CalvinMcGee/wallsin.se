@@ -1,0 +1,6 @@
+<h1>Detta är ett meddelande från hemsidan</h1>
+
+<p><a href="mailto:{{ form.value.email }}">{{ form.value.firstname }} {{ form.value.lastname }} &lt;{{ form.value.email }}&gt;</a><br>
+Skickade följande meddelande:</p>
+
+<p>{{ string(form.value.message|e)|nl2br }}</p>
