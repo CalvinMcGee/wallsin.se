@@ -1,0 +1,16 @@
+enabled: true
+from: info@wallsin.se
+from_name: Wallsin.se
+to: conny@wallsin.se
+to_name: Conny Wallsin
+mailer:
+  engine: mail
+  smtp:
+    server: localhost
+    port: 25
+    encryption: none
+    user: ''
+    password: ''
+  sendmail:
+    bin: '/usr/sbin/sendmail'
+content_type: text/html
