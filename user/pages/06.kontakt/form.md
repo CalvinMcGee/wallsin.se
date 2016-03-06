@@ -65,5 +65,14 @@ form:
   process:
     - captcha:
         recatpcha_secret: '6Lfo2RgTAAAAAKBZml7nM2ZFSeOO8i_cgsvdZ-rG'
+    - email:
+        from: "{{ config.plugins.email.from }}"
+        from_name: "{{ form.value.firstname|e }} {{ form.value.lastname|e }}"
+        to: "{{ config.plugins.email.to }}"
+        to_name: "{{ config.plugins.email.to_name }}"
+        reply_to:
+            - "{{ form.value.email|e }}"
+        subject: "[Feedback] {{ form.value.subject|e }}"
+        body: "{% include 'forms/contact.html.twig' %}"
     - display: thankyou
 ---
