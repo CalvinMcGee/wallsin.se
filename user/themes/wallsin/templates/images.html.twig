@@ -1,0 +1,19 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <main class="content">
+      <div class="row">
+        <div class="column small-12">
+          <article class="post-content">
+            <header class="post-header">
+              <h1 class="post-title">{{ header.title }}</h1>
+            </header>
+            {{ page.content }}
+          </article>
+        </div>
+      </div>
+      {% for child in page.collection %}
+        {% include 'partials/image.html.twig' with {'page':child } %}
+      {% endfor %}
+    </main>
+{% endblock %}
