@@ -4,7 +4,7 @@ theme: grav
 dashboard:
   days_of_stats: 7
 session:
-  timeout: 1800
+  timeout: 3600
 warnings:
   delete_page: true
 edit_mode: normal
