@@ -1,7 +1,7 @@
 ---
 title: Maskinpark
 ---
-- 1 John Deere traktor 5100 –10 med Vikplog, frontlastare, saltspridare, slaghack och jordfräs
+- 1 John Deere traktor 6100 RC -15 med Vikplog, frontlastare, saltspridare, slaghack och jordfräs
 
 - 1 John Deere 3720 minitraktor med vikplog och saltspridare –14
 
@@ -13,6 +13,6 @@ title: Maskinpark
 
 - 1 Ford transit 3,5 ton med tippflak -85
 
-- 1 Ford Ranger –10
+- 1 Ford Ranger –07
 
 - Övrigt: motorsågar, borrmaskiner, diverse hand och elmaskiner för bl.a. snickeriarbeten, plattsättning, stålarbeten, kompressor för bergsborrning.
