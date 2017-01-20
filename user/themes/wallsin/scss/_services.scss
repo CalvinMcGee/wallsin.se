@@ -3,7 +3,7 @@
   padding: 2rem;
 }
 
-.services__list {
+.services > ul {
   color: $services-item-color;
   font-size: 1.375rem;
   font-weight: $services-font-weight;
@@ -15,11 +15,11 @@
 }
 
 @media #{$medium-up} {
-  .services__list {
+  .services > ul {
     font-size: 1.6875rem;
   }
 
-  .services__item {
+  .services > ul > li {
     float: left;
     width: 50%;
   }
