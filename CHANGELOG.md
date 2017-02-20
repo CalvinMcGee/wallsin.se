@@ -1,8 +1,44 @@
+# v1.1.17
+## 02/17/2017
+
+1. [](#bugfix)
+    * Fix for double extensions getting added during some redirects [#1307](https://github.com/getgrav/grav/issues/1307)
+    * Fix syntax error in PHP 5.3. Move the version check before requiring the autoloaded deps
+    * Fix Whoops displaying error page if there is PHP core warning or error [Admin #980](https://github.com/getgrav/grav-plugin-admin/issues/980)
+
+# v1.1.16
+## 02/10/2017
+
+1. [](#new)
+    * Exposed the Pages cache ID for use by plugins (e.g. Form) via `Pages::getPagesCacheId()`
+    * Added `Languages::resetFallbackPageExtensions()` regarding [#1276](https://github.com/getgrav/grav/pull/1276)
+1. [](#improved)
+    * Allowed CLI to use non-volatile cache drivers for better integration with CLI and Web caches
+    * Added Gantry5-compatible query information to Caddy configuration
+    * Added some missing docblocks and type-hints
+    * Various code cleanups (return types, missing variables in doclbocks, etc.)
+1. [](#bugfix)
+    * Fix blueprints slug validation [https://github.com/getgrav/grav-plugin-admin/issues/955](https://github.com/getgrav/grav-plugin-admin/issues/955)
+
+# v1.1.15
+## 01/30/2017
+
+1. [](#new)
+    * Added a new `Collection::merge()` method to allow merging of multiple collections [#1258](https://github.com/getgrav/grav/pull/1258)
+    * Added [OpenCollective](https://opencollective.com/grav) backer/sponsor info to `README.md`
+1. [](#improved)
+    * Add an additional parameter to GPM::findPackage to avoid throwing an exception, for use in Twig [#1008](https://github.com/getgrav/grav/issues/1008)
+    * Skip symlinks if found while clearing cache [#1269](https://github.com/getgrav/grav/issues/1269)
+1. [](#bugfix)
+    * Fixed an issue when page collection with header-based `sort.by` returns an array [#1264](https://github.com/getgrav/grav/issues/1264)
+    * Fix `Response` object to handle `303` redirects when `open_basedir` in effect [#1267](https://github.com/getgrav/grav/issues/1267)
+    * Silence `E_WARNING: Zend OPcache API is restricted by "restrict_api" configuration directive`
+
 # v1.1.14
 ## 01/18/2017
 
 1. [](#bugfix)
-    * Fixed `page.collection()` returning array and not Collection object when header variable did not exist
+    * Fixed `Page::collection()` returning array and not Collection object when header variable did not exist
     * Revert `Content-Encoding: identity` fix, and let you set `cache: allow_webserver_gzip:` option to switch to `identity` [#548](https://github.com/getgrav/grav/issues/548)
 
 # v1.1.13
