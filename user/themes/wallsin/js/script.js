@@ -11,4 +11,10 @@ jQuery.extend(jQuery.colorbox.settings, {
 
 $(document).ready(function() {
   $('a.lightbox-link').colorbox();
+
+  var $hamburger = $(".hamburger");
+  $hamburger.on("click", function(e) {
+    $hamburger.toggleClass("is-active");
+    $('.menu').toggleClass("menu--active");
+  });
 });

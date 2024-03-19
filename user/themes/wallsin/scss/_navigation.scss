@@ -10,13 +10,18 @@
 .page-header--logo {
   display: table-header-group;
 
-  > img {
-    padding: 1rem;
+  img {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
 .menu {
-  display: table-row-group;
+  display: none;
+
+  &--active {
+    display: table-row-group;
+  }
 }
 
 .menu--list {
@@ -64,6 +69,11 @@
   .page-header--logo {
     display: block;
     float: left;
+
+    img {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 
   .menu {

@@ -1,0 +1,40 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Du har fått ett nytt meddelande från {{ form.value.firstname }} {{ form.value.lastname }}</mj-preview>
+    <mj-attributes>
+    	<mj-column padding-bottom="20px" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#C0C0C0">
+    <mj-raw><!-- START HEADER --></mj-raw>
+    <mj-section full-width="full-width" background-color="#FC7178" padding="0">
+      <mj-column padding-bottom="0">
+        <mj-spacer height="50px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+    <mj-section full-width="full-width" background-color="#FC7178" padding="0">
+      <mj-column background-color="#FFFFFF" padding-bottom="0">
+        <mj-spacer height="50px"></mj-spacer>
+      </mj-column>
+    </mj-section>
+    <mj-raw><!-- END HEADER --></mj-raw>
+    <mj-section full-width="full-width" background-color="#C0C0C0" padding-top="0" padding-bottom="0">
+      <mj-column background-color="#FFFFFF">
+        <mj-text font-size="25px" line-height="32px">Du har fått ett meddelande</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section full-width="full-width" background-color="#C0C0C0" padding-top="0" padding-bottom="0">
+      <mj-column background-color="#FFFFFF">
+        <mj-text font-size="18px" line-height="26px"><strong>Från:</strong> {{ form.value.firstname }} {{ form.value.lastname }} &lt;<a href="mailto:{{ form.value.email }}">{{ form.value.email }}</a>&gt;</mj-text>
+        <mj-text font-size="18px" line-height="26px"><strong>Telefonnummer:</strong> {{ form.value.phone }}</mj-text>
+        <mj-text font-size="18px" line-height="26px"><strong>Adress:</strong> {{ form.value.address }}</mj-text>
+        <mj-text font-size="18px" line-height="26px"><strong>Meddelande:</strong><br/>{{ string(form.value.message|e)|nl2br }}</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section full-width="full-width" background-color="#C0C0C0" padding-top="0" padding-bottom="0">
+      <mj-column background-color="#FFFFFF">
+        <mj-button href="mailto:{{ form.value.email }}" font-size="20px" background-color="#FC7178" color="#000000">Svara till {{ form.value.firstname }} {{ form.value.lastname }}</mj-button>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

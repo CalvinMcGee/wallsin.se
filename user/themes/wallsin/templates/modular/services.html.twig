@@ -1,4 +1,15 @@
 <h2>{{ page.title()}}</h2>
-<div class="services">
-  {{ content }}
+<div class="row">
+  {% for service in page.header.services %}
+    <div class="column small-12 medium-4">
+      <div class="product-card">
+        <div class="product-card__head">
+          <img src="{{ page.media[service.image].cropZoom(400, 400).brightness(-75).url }}" style="max-width: 400px;" />
+        </div>
+        <div class="product-card__body">
+          <h3 class="product-card__header">{{ service.name }}</h3>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
 </div>
