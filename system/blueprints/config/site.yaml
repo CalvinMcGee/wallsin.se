@@ -19,7 +19,7 @@ form:
                 default_lang:
                     type: text
                     label: PLUGIN_ADMIN.SITE_DEFAULT_LANG
-                    size: vsmall
+                    size: x-small
                     placeholder: PLUGIN_ADMIN.SITE_DEFAULT_LANG_PLACEHOLDER
                     help: PLUGIN_ADMIN.SITE_DEFAULT_LANG_HELP
 
@@ -65,7 +65,7 @@ form:
 
                 summary.size:
                     type: text
-                    size: x-small
+                    size: small
                     append: PLUGIN_ADMIN.CHARACTERS
                     label: PLUGIN_ADMIN.SUMMARY_SIZE
                     help: PLUGIN_ADMIN.SUMMARY_SIZE_HELP
