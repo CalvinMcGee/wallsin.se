@@ -39,9 +39,23 @@ form:
       validate:
         required: true
 
+    - name: phone
+      row: 3
+      label: Telefonnummer
+      placeholder: Ange telefonnummer
+      type: text
+      outerclasses: 'column xsmall-12 small-6'
+
+    - name: address
+      row: 3
+      label: Adress
+      placeholder: Ange adress
+      type: text
+      outerclasses: 'column xsmall-12 small-6'
+
     - name: message
       rows: 5
-      row: 3
+      row: 4
       label: Ditt meddelande
       placeholder: Ange ditt meddelande
       type: textarea
@@ -50,11 +64,11 @@ form:
         required: true
 
     - name: g-recaptcha-response
-      row: 4
+      row: 5
       label: Captcha
       type: captcha
       outerclasses: 'column xsmall-12'
-      recatpcha_site_key: '6Lfo2RgTAAAAACkXc41aJ3iE5s6f1iaUMnFL7GTe'
+      recaptcha_site_key: '6Lfo2RgTAAAAACkXc41aJ3iE5s6f1iaUMnFL7GTe'
       recaptcha_not_validated: 'Captcha inte giltig'
       validate:
         required: true
@@ -74,5 +88,10 @@ form:
             - "{{ form.value.email|e }}"
         subject: "[Feedback] {{ form.value.subject|e }}"
         body: "{% include 'forms/contact.html.twig' %}"
+    - save:
+        fileprefix: kontakt-
+        dateformat: Ymd-His-u
+        extension: txt
+        body: "{% include 'forms/data.txt.twig' %}"
     - display: thankyou
 ---

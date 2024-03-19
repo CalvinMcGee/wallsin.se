@@ -1,5 +1,6 @@
 ---
 title: Wallsin Entreprenad
+no_title: true
 process:
   twig: true
 ---
