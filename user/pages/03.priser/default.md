@@ -30,7 +30,7 @@ process:
 
 **Med reservation för prisändringar**
 
-**Priserna senast uppdaterade {{ header.date | date("Y-m-d") }}**
+**Priserna senast uppdaterade {{ page.modified | date("Y-m-d") }}**
 
 Vi utför även jouruppdrag kvällar, nätter och helger. Ring för prisförfrågningar.
 ## Försäljning
